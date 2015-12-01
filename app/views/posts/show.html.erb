@@ -1,0 +1,32 @@
+
+<div class="col-md-12">
+<div class="col-md-8">
+
+<h1><%= @post.title %>
+</h1>
+
+<h2>
+  <%= @post.user.name %>
+</h2>
+
+<div class="well">
+<ol class="">
+  <% @post.body.each_line do |line| %>
+    <h4><li class=""><%= line %></li></h4>
+  <% end %>
+</ol>
+</div>
+
+<p>
+  <%= @post.tag_list %>
+</p>
+
+
+<button class="btn"><%= link_to 'Edit', edit_post_path(@post) %></button>
+
+</div>
+
+<div class="col-md-4">
+
+</div>
+</div>
